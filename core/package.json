@@ -1,0 +1,9 @@
+{
+  "name": "@ui-lib/core",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.5"
+  }
+}

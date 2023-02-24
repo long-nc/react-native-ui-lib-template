@@ -1,0 +1,57 @@
+module.exports = {
+  root: true,
+  parser: "@typescript-eslint/parser",
+  plugins: ["react", "react-native", "@typescript-eslint", "unused-imports"],
+  ignorePatterns: [
+    "node_modules",
+    "dist",
+    "public",
+    ".eslintrc.js",
+    "babel.config.js",
+    "jest.config.js",
+    "metro.config.js",
+    "react-native.config.js",
+    "scripts",
+    "Pods",
+  ],
+  extends: [
+    "@react-native-community",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+  ],
+  parserOptions: {
+    project: "./tsconfig.json",
+  },
+  rules: {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-children-prop": "off",
+    "react/display-name": "off",
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-alert": "off",
+    "react-native/no-unused-styles": "warn",
+  },
+  settings: {
+    react: {
+      version: "18",
+    },
+  },
+};
